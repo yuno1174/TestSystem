@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+<meta charset="utf-8" />
+<title>HomePage</title>
+<link href="bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+	<nav class="navbar navbar-inverse">
+		<div class="container">
+			<div class="navbar-header">
+				<a class="navbar-brand">テスト管理システム</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<li class="active"><a wicket:id="toMenuPage">メニュー</a></li>
+				<li class="active"><a wicket:id="toManagementEmployeePage">社員管理</a></li>
+				<li class="active"><a wicket:id="toLogoutPage">ログアウト</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a style="color: white" wicket:id="hello"></a></li>
+			</ul>
+		</div>
+	</nav>
+	<wicket:child />
+
+	<script
+		src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="bootstrap.min.js"></script>
+</body>
+</html>

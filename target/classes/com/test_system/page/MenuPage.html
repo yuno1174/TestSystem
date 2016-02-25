@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:wicket="http://wicket.apache.org">
+<head>
+<meta charset="UTF-8" />
+<title>MenuPage</title>
+
+</head>
+<body>
+	<wicket:extend>
+		<h1 style="text-align: center">メニューページ</h1>
+		<div class="container">
+			<table class="table table-striped table-bordered table-condensed">
+				<tr>
+					<th>製品ID</th>
+					<th>製品名</th>
+				</tr>
+				<tr wicket:id="products">
+					<td><a wicket:id="toProductTestInfomationPage"><span wicket:id="productId"></span></a></td>
+					<td wicket:id="productName"></td>
+				</tr>
+			</table>
+		</div>
+	</wicket:extend>
+</body>
+</html>
