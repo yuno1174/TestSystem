@@ -16,8 +16,9 @@ public class TestContentDAO {
 		Class.forName(DBSetting.SQL_DRIVER);
 	}
 
+	// 使われない
 	public List<TestContentBean> selectTestContent() throws SQLException {
-		String sql = "select * from test_content while ;";
+		String sql = "select * from test_content";
 		List<TestContentBean> testContents = new ArrayList<>();
 
 		Connection conn = DriverManager.getConnection(DBSetting.URL,
@@ -27,9 +28,33 @@ public class TestContentDAO {
 		ResultSet results = stmt.executeQuery(sql);
 		while (results.next()) {
 			testContents.add(new TestContentBean(
-					);
+					results.getString("productid"), results
+							.getInt("testnumber"), results.getString("type"),
+					results.getString("step"), results
+							.getString("expectedoutput")));
 		}
 
+		return testContents;
+	}
+
+	public List<TestContentBean> selectTestContent(String productid)
+			throws SQLException {
+		String sql = "select * from test_content where productid = '"
+				+ productid + "';";
+		List<TestContentBean> testContents = new ArrayList<>();
+
+		Connection conn = DriverManager.getConnection(DBSetting.URL,
+				DBSetting.USER, DBSetting.PASS);
+		Statement stmt = conn.createStatement();
+
+		ResultSet results = stmt.executeQuery(sql);
+		while (results.next()) {
+			testContents.add(new TestContentBean(
+					results.getString("productid"), results
+							.getInt("testnumber"), results.getString("type"),
+					results.getString("step"), results
+							.getString("expectedoutput")));
+		}
 		return testContents;
 	}
 }

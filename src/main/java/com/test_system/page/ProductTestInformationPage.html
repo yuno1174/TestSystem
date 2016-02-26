@@ -7,9 +7,58 @@
 <body>
 	<wicket:extend>
 		<h1 style="text-align: center">製品テスト情報ページ</h1>
-		製品ID : <span wicket:id="productId"></span>
 		<br>
-		製品名 : <span wicket:id="productName"></span>
+		<h2 style = "text-align: center">製品情報</h2>
+		<div class="container">
+			<table class="table table-striped table-bordered table-condensed">
+				<tr>
+					<th>製品ID</th>
+					<th>製品名称</th>
+				</tr>
+				<tr>
+					<td wicket:id="productId"></td>
+					<td wicket:id="productName"></td>
+				</tr>
+			</table>
+		</div>
+		<br>
+		<h2 style = "text-align: center">テスト内容</h2>
+		<div class="container">
+			<table class="table table-striped table-bordered table-condensed">
+				<tr>
+					<th>テスト番号</th>
+					<th>種別</th>
+					<th>実行手順</th>
+					<th>期待される出力</th>
+				</tr>
+				<tr wicket:id="testContents">
+					<td wicket:id="testNumber"></td>
+					<td wicket:id="type"></td>
+					<td wicket:id="step"></td>
+					<td wicket:id="expectedOutput"></td>
+				</tr>
+			</table>
+		</div>
+		<br>
+		<h2 style = "text-align: center">テスト情報</h2>
+		<div class="container">
+			<table class="table table-striped table-bordered table-condensed">
+				<tr>
+					<th>テスト番号</th>
+					<th>テスト日時</th>
+					<th>社員ID</th>
+					<th>結果</th>
+					<th>備考</th>
+				</tr>
+				<tr wicket:id="testInformations">
+					<td wicket:id="testNumber"></td>
+					<td wicket:id="testDay"></td>
+					<td wicket:id="employeeId"></td>
+					<td wicket:id="result"></td>
+					<td wicket:id="remarks"></td>
+				</tr>
+			</table>
+		</div>
 	</wicket:extend>
 </body>
 </html>

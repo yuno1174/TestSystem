@@ -40,8 +40,12 @@ public class MenuPage extends TestHeader {
 						"toProductTestInfomationPage") {
 					@Override
 					public void onClick() {
-						setResponsePage(new ProductTestInformationPage(
-								item.getModel()));
+						try {
+							setResponsePage(new ProductTestInformationPage(
+									item.getModel()));
+						} catch (SQLException e) {
+							e.printStackTrace();
+						}
 					}
 				};
 				item.add(toProductTestInfomationPageLink);
