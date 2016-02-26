@@ -1,1 +1,3 @@
 # TestSystem
+
+サーブレットで書いたものを題材にwicketとbootstrapについて勉強するよ
