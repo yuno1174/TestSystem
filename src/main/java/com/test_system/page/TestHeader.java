@@ -7,6 +7,8 @@ import org.apache.wicket.markup.html.basic.Label;
 import org.apache.wicket.markup.html.link.Link;
 import org.apache.wicket.model.Model;
 
+import com.test_system.MySession;
+
 public class TestHeader extends WebPage {
 	private static final long serialVersionUID = 1L;
 

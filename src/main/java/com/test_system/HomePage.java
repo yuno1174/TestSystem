@@ -11,7 +11,6 @@ import org.apache.wicket.model.Model;
 import com.test_system.bean.EmployeeBean;
 import com.test_system.dao.EmployeeDAO;
 import com.test_system.page.MenuPage;
-import com.test_system.page.MySession;
 import com.test_system.page.TestHeader;
 
 public class HomePage extends TestHeader {

@@ -3,6 +3,7 @@ package com.test_system.page;
 import org.apache.wicket.markup.html.link.Link;
 
 import com.test_system.HomePage;
+import com.test_system.MySession;
 
 public class LogoutPage extends TestHeader {
 	private static final long serialVersionUID = 1L;

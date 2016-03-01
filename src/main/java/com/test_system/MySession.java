@@ -1,4 +1,4 @@
-package com.test_system.page;
+package com.test_system;
 
 import org.apache.wicket.protocol.http.WebSession;
 import org.apache.wicket.request.Request;
